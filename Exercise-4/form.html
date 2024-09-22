@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cake Order Form</title>
+    <style>
+        body 
+        {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: lightyellow;
+            padding: 10px;
+        }
+        form 
+        {
+            background-color: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="email"], select 
+        {
+            width: 100%;
+            padding: 5px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] 
+        {
+            background-color: purple;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover 
+        {
+            background-color: grey;
+        }
+        h1 
+        {
+            text-align: center;
+            color: purple;
+        }
+    </style>
+    <script>
+        function showAlert(event) 
+        {
+            event.preventDefault(); 
+            alert("Your order has been placed successfully!");
+            document.getElementById("order-form").reset(); 
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Order Your Cake</h1>
+    <form id="order-form" method="POST" onsubmit="showAlert(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="cake-type">Choose Your Cake:</label>
+        <select id="cake-type" name="cake-type" required>
+            <option value=" "></option>
+            <option value="Butter Scotch">Butter Scotch</option>
+            <option value="Choco Truffle">Choco Truffle</option>
+            <option value="Red Velvet">Red Velvet</option>
+            <option value="Blueberry">Blueberry</option>
+        </select>
+
+        <label for="size">Cake Size:</label>
+        <select id="size" name="size" required>
+            <option value=" "></option>
+            <option value="Small">Small - 1 kg</option>
+            <option value="Medium">Medium - 2 kg</option>
+            <option value="Large">Large - 3 kg</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter your address">
+
+        
+        <label for="Delivery-type">Mode of Delivery:</label>
+        <select id="Delivery-type" name="Delivery-type" required>
+            <option value=" "></option>
+            <option value="Pick up">Pick up</option>
+            <option value="Drop off">Drop off</option>
+            <option value="Shipping">Shipping</option>
+        </select>
+
+        <label for="Date">Date to be delivered:</label>
+        <input type="text" id="Date" name="Date" placeholder="Enter Date">
+
+        
+        <label for="Payment-type">Payment Method:</label>
+        <select id="Payment-type" name="Payment-type" required>
+            <option value=" "></option>
+            <option value="Cash on delivery">Cash on delivery</option>
+            <option value="Credit card">Credit card</option>
+            <option value="Others">Others</option>
+        </select>
+
+        <label for="message">Message on the Cake:</label>
+        <input type="text" id="message" name="message" placeholder="Enter a message">
+
+        <input type="submit" value="Submit Order">
+    </form>
+
+</body>
+</html>
