@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Time Display</title>
+    <style>
+        #time 
+        {
+            width: 500px;
+            height: 30px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('time').innerHTML = `${hours}:${minutes}:${seconds}`;
+            setInterval(updateTime,1000);
+        }
+        function validate()
+            {
+                var mail=document.getElementById("mail").value;
+                if(mail==="")
+                {
+                    alert("Mail id required");
+                    return false;
+                }
+                var atindex=mail.indexOf("@");
+                var dotindex=mail.indexOf(".",atindex);
+                if(atindex < 1 || dotindex < 2 || dotindex < atindex+2)
+                {
+                    alert("Enter valid email address");
+                    return false;
+                }
+                var username = document.getElementById("username").value;
+                if (username === "") {
+                    alert("Username must not be empty");
+                    return false;
+                }
+                var password = document.getElementById("password").value;
+                if (password === "") {
+                    alert("Enter password");
+                    return false;
+                }
+            }
+    </script>
+</head>
+<body id="body" onclick="document.getElementById('body').style='background-color:yellow;'">
+    <center>
+        <h1>Current Time</h1>
+        <div id="time"></div>
+        <div class="container">
+            <button type="button" onclick="updateTime()">Set Time</button>
+        </div>
+        <form onsubmit="return validate()">
+                <table>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" id="mail"></td>
+                </tr>
+                <tr>
+                    <td>username:</td>
+                    <td><input type="text" id="username" required></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" id="password"></td>
+                </tr>
+            </table>
+            <input type="submit">
+        </form>
+        <p id="para">
+            Doe a Deer!!!
+        </p>
+        <div style="margin:5px;padding:10px;width:100px" onmousemove="document.getElementById('para').innerHTML='Mouse Over me'" onmouseout="document.getElementById('para').innerHTML='Mouse out'">Inside Division</div>
+            <div style="margin-top:40px;">
+                <p id="para1" style="display:none;margin-bottom:5px;">Surprise I am a deer!!!</p>
+                <img src="https://cdn.dribbble.com/users/1787323/screenshots/15348177/media/4f00462adc9a307ce0b93c0c9c78e96d.png" alt="Deer_image" width="20%" height="20%" onmouseover="document.getElementById('para1').style.display='block'" onmouseout="document.getElementById('para1').style.display='none'">
+            </div>
+        </div>
+    </center>
+</body>
+</html>
+
