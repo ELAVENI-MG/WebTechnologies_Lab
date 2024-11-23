@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>ex5a</servlet-name>
+        <servlet-class>ex5a</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ex5a</servlet-name>
+        <url-pattern>/ex5a</url-pattern>
+    </servlet-mapping>
+</web-app>
