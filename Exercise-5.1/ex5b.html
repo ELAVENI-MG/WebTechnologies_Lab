@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop Order</title>
+    <style>
+        body
+        {
+            background-color: aqua;
+        }
+        .div
+        {
+            border:4px solid black;
+            width:fit-content;
+            padding:20px;
+            background-color: white;
+        }
+    </style>
+    <script>
+        function fun1()
+        {
+            alert('Order Placed');
+        }
+    </script>
+</head>
+<body>
+    <center>
+    <div class="div">
+    <img src="https://th.bing.com/th/id/OIP.Ui0U5QGkAxhyGNtquM1siQHaHa?w=158&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="image" width="200" height="200"/>
+    <h2>Cake Shop Order Form</h2>
+    <form action="ex5b" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="cake">Select Cake:</label>
+        <select id="cake" name="cake" required>
+            <option value="">--Choose a cake--</option>
+            <option value="Chocolate">Chocolate</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Red Velvet">Red Velvet</option>
+        </select><br><br>
+
+        <button type="submit" onclick="fun1()">Submit Order</button>
+    </form>
+    </div>
+    </center>
+</body>
+</html>
