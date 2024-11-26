@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cakes>
+    <cake>
+        <name>Chocolate Cake</name>
+        <price>15.99</price>
+        <description>A rich and moist chocolate cake with creamy frosting.</description>
+    </cake>
+    <cake>
+        <name>Vanilla Cake</name>
+        <price>12.99</price>
+        <description>Soft and fluffy vanilla cake with a light frosting.</description>
+    </cake>
+    <cake>
+        <name>Strawberry Cake</name>
+        <price>18.99</price>
+         <description>Soft Strawberry cake with a sweet frosting.</description>
+    </cake>
+</cakes>
